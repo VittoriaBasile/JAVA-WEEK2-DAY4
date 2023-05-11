@@ -93,7 +93,7 @@ public class Application {
 		System.out.println("ESERCIZIO4");
 		List<List<Product>> listaProdottiFebbraioAprile = listaOrdiniBaby.stream()
 				.filter((order -> order.getOrderDate().isAfter(LocalDate.of(2021, 1, 31))
-						&& order.getOrderDate().isBefore(LocalDate.of(2021, 5, 1))
+						&& order.getOrderDate().isBefore(LocalDate.of(2021, 4, 2))
 						&& (order.getCustomer().getTier() == 2)))
 				.map(order -> order.getProducts()).toList();
 		System.out.println(listaProdottiFebbraioAprile);
