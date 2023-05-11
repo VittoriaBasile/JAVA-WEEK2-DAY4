@@ -51,7 +51,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "id: " + getId() + " " + "nome: " + getName() + " " + "categoria: " + getCategory() + " " + "prezzo: "
+		return "id: " + getId() + " ," + "nome: " + getName() + " ," + "categoria: " + getCategory() + " ," + "prezzo: "
 				+ getPrice() + "\n";
 	}
 

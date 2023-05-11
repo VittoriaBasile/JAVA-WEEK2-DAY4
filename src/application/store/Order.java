@@ -96,8 +96,8 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "idOrder: " + getId() + " " + "status: " + getStatus() + " " + "orderDate: " + getOrderDate() + " "
-				+ "deliveryDate: " + getDeliveryDate() + " " + "prodotto: " + getProducts() + " " + "customer: "
+		return "idOrder: " + getId() + " ," + "status: " + getStatus() + " ," + "orderDate: " + getOrderDate() + " ,"
+				+ "deliveryDate: " + getDeliveryDate() + " ," + "prodotto: " + getProducts() + " ," + "customer: "
 				+ getCustomer() + "\n";
 	}
 

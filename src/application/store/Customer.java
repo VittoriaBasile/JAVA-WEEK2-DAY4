@@ -49,7 +49,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "idCustomer: " + getId() + " " + "nome: " + getName() + " " + "tier: " + getTier() + "\n";
+		return "idCustomer: " + getId() + " , " + "nome: " + getName() + " , " + "tier: " + getTier() + "\n";
 	}
 
 }

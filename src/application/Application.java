@@ -48,8 +48,7 @@ public class Application {
 		List.add(p13);
 		List.add(p14);
 		List.add(p15);
-
-		/****** ESERCIZIO1 *********/
+		System.out.println("ESERCIZIO1");
 		List<Product> bookListMaggioreCento = List.stream()
 				.filter(book -> book.getPrice() > 100 && book.getCategory().equals("Books")).toList();
 		List<String> bookListMaggioreCentoParsata = bookListMaggioreCento.stream().map(book -> book.toString())
@@ -60,7 +59,7 @@ public class Application {
 		} else {
 			System.out.println("NESSUN ELEMENTO TROVATO");
 		}
-		/****** ESERCIZIO2 *********/
+		System.out.println("ESERCIZIO2");
 		Customer c1 = new Customer("Maria", 1);
 		Customer c2 = new Customer("Mario", 2);
 		Customer c3 = new Customer("Giiuseppe", 2);
@@ -84,13 +83,13 @@ public class Application {
 		listaOrdiniBaby.add(o3);
 
 		System.out.println(listaOrdiniBaby);
-		/****** ESERCIZIO3 *********/
+		System.out.println("ESERCIZIO3");
 		List<Product> boysList = List.stream().filter(boys -> boys.getCategory().toString().equals("Boy")).map(boys -> {
 			boys.setPrice(boys.getPrice() * 10 / 100);
 			return boys;
 		}).toList();
 		System.out.println(boysList);
-		/****** ESERCIZIO4 *********/
+		System.out.println("ESERCIZIO4");
 		List<List<Product>> listaProdottiFebbraioAprile = listaOrdiniBaby.stream()
 				.filter((order -> order.getOrderDate().isAfter(LocalDate.of(2021, 1, 31))
 						&& order.getOrderDate().isBefore(LocalDate.of(2021, 5, 1))
