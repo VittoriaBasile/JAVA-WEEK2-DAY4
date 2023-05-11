@@ -86,7 +86,7 @@ public class Application {
 		System.out.println("ESERCIZIO3");
 		List<Product> boysList = listaMagazzino.stream().filter(boys -> boys.getCategory().toString().equals("Boy"))
 				.map(boys -> {
-					boys.setPrice(boys.getPrice() * 10 / 100);
+					boys.setPrice(boys.getPrice() * 0.9);
 					return boys;
 				}).toList();
 		System.out.println(boysList);
