@@ -23,6 +23,12 @@ public class Application {
 		Product p7 = new Product("Ciuccio", "Baby", 15.20);
 		Product p8 = new Product("Biberon", "Baby", 10);
 		Product p9 = new Product("Scarpine", "Baby", 25.60);
+		Product p10 = new Product("Boxer", "Boy", 5.60);
+		Product p11 = new Product("Cravatta", "Boy", 26.60);
+		Product p12 = new Product("Portafogli", "Boy", 75.80);
+		Product p13 = new Product("Scarpe", "Boy", 125.90);
+		Product p14 = new Product("Camicia", "Boy", 50);
+		Product p15 = new Product("Papillon", "Boy", 35.30);
 
 		List<Product> List = new ArrayList<>();
 		List.add(p1);
@@ -32,6 +38,14 @@ public class Application {
 		List.add(p5);
 		List.add(p6);
 		List.add(p7);
+		List.add(p8);
+		List.add(p9);
+		List.add(p10);
+		List.add(p11);
+		List.add(p12);
+		List.add(p13);
+		List.add(p14);
+		List.add(p15);
 
 		/****** ESERCIZIO1 *********/
 		List<Product> bookListMaggioreCento = List.stream()
@@ -66,6 +80,12 @@ public class Application {
 		listaOrdiniBaby.add(o3);
 
 		System.out.println(listaOrdiniBaby);
+		/****** ESERCIZIO3 *********/
+		List<Product> boysList = List.stream().filter(boys -> boys.getCategory().toString().equals("Boy")).map(boys -> {
+			boys.setPrice(boys.getPrice() * 10 / 100);
+			return boys;
+		}).toList();
+		System.out.println(boysList);
 
 	}
 
