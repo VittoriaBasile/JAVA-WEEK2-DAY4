@@ -28,6 +28,16 @@ public class Order {
 
 	}
 
+	public Order(String status, LocalDate orderDate, List<Product> products, Customer customer) {
+		setId(id);
+		setStatus(status);
+		setOrderDate(orderDate);
+		setDeliveryDate(deliveryDate);
+		setProducts(products);
+		setCustomer(customer);
+
+	}
+
 	public Random getRandom() {
 		return random;
 	}
