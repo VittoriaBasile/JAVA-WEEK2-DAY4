@@ -32,24 +32,24 @@ public class Application {
 		Product p14 = new Product("Camicia", "Boy", 50);
 		Product p15 = new Product("Papillon", "Boy", 35.30);
 
-		List<Product> List = new ArrayList<>();
-		List.add(p1);
-		List.add(p2);
-		List.add(p3);
-		List.add(p4);
-		List.add(p5);
-		List.add(p6);
-		List.add(p7);
-		List.add(p8);
-		List.add(p9);
-		List.add(p10);
-		List.add(p11);
-		List.add(p12);
-		List.add(p13);
-		List.add(p14);
-		List.add(p15);
+		List<Product> listaMagazzino = new ArrayList<>();
+		listaMagazzino.add(p1);
+		listaMagazzino.add(p2);
+		listaMagazzino.add(p3);
+		listaMagazzino.add(p4);
+		listaMagazzino.add(p5);
+		listaMagazzino.add(p6);
+		listaMagazzino.add(p7);
+		listaMagazzino.add(p8);
+		listaMagazzino.add(p9);
+		listaMagazzino.add(p10);
+		listaMagazzino.add(p11);
+		listaMagazzino.add(p12);
+		listaMagazzino.add(p13);
+		listaMagazzino.add(p14);
+		listaMagazzino.add(p15);
 		System.out.println("ESERCIZIO1");
-		List<Product> bookListMaggioreCento = List.stream()
+		List<Product> bookListMaggioreCento = listaMagazzino.stream()
 				.filter(book -> book.getPrice() > 100 && book.getCategory().equals("Books")).toList();
 		List<String> bookListMaggioreCentoParsata = bookListMaggioreCento.stream().map(book -> book.toString())
 				.toList();
@@ -63,13 +63,13 @@ public class Application {
 		Customer c1 = new Customer("Maria", 1);
 		Customer c2 = new Customer("Mario", 2);
 		Customer c3 = new Customer("Giiuseppe", 2);
-		List<Product> babyListC1 = List.stream()
+		List<Product> babyListC1 = listaMagazzino.stream()
 				.filter(baby -> baby.getCategory().toString().equals("Baby") && baby.getName().equals("Tutina")
 						|| baby.getName().equals("Ciuccio"))
 				.toList();
-		List<Product> babyListC2 = List.stream()
+		List<Product> babyListC2 = listaMagazzino.stream()
 				.filter(baby -> baby.getCategory().toString().equals("Baby") && baby.getPrice() > 20).toList();
-		List<Product> babyListC3 = List.stream()
+		List<Product> babyListC3 = listaMagazzino.stream()
 				.filter(baby -> baby.getCategory().toString().equals("Baby") && baby.getPrice() < 10).toList();
 		LocalDate d1 = LocalDate.of(2021, 1, 01);
 		LocalDate d2 = LocalDate.of(2021, 2, 04);
@@ -84,10 +84,11 @@ public class Application {
 
 		System.out.println(listaOrdiniBaby);
 		System.out.println("ESERCIZIO3");
-		List<Product> boysList = List.stream().filter(boys -> boys.getCategory().toString().equals("Boy")).map(boys -> {
-			boys.setPrice(boys.getPrice() * 10 / 100);
-			return boys;
-		}).toList();
+		List<Product> boysList = listaMagazzino.stream().filter(boys -> boys.getCategory().toString().equals("Boy"))
+				.map(boys -> {
+					boys.setPrice(boys.getPrice() * 10 / 100);
+					return boys;
+				}).toList();
 		System.out.println(boysList);
 		System.out.println("ESERCIZIO4");
 		List<List<Product>> listaProdottiFebbraioAprile = listaOrdiniBaby.stream()

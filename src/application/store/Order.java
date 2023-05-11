@@ -5,11 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 public class Order {
-	// private DateTimeFormatter formatter =
-	// DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
 	LocalDate today = LocalDate.now();
 	private Random random = new Random();
-	private int r = random.nextInt(0, 10);
+	private int r = random.nextInt(1, 10);
 
 	private long id = random.nextInt(0, 1000000);
 	private String status;
@@ -97,7 +96,7 @@ public class Order {
 	@Override
 	public String toString() {
 		return "idOrder: " + getId() + " ," + "status: " + getStatus() + " ," + "orderDate: " + getOrderDate() + " ,"
-				+ "deliveryDate: " + getDeliveryDate() + " ," + "prodotto: " + getProducts() + " ," + "customer: "
+				+ "deliveryDate: " + getDeliveryDate() + " // " + "prodotto: " + getProducts() + " // " + "customer: "
 				+ getCustomer() + "\n";
 	}
 
